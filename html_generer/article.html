@@ -5,7 +5,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-        <table border="1">
+		<h1>Consultation des articles</h1>
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th>POSITIONLATITUDE</th>
@@ -15,6 +16,7 @@
                     <th>PUBLIER_ACTIF</th>
                     <th>CONTENU</th>
                     <th>POSITIONNOM</th>
+					<th>SUPPRESSION</th>
                 </tr>
             </thead>
             <tbody data-bind="foreach: items">
@@ -26,6 +28,7 @@
                     <td data-bind="text: publier_actif"/>
                     <td data-bind="text: contenu"/>
                     <td data-bind="text: positionNom"/>
+					<td><input type="button" value="Supprimer"/></td>
                 </tr>
             </tbody>
         </table>

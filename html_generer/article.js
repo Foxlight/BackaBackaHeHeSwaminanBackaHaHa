@@ -15,5 +15,24 @@ MyCustomerViewModel = function () {
                     });
                 });
             }); 
+	self.remove = function(items){  
+                   self.items.remove(item);
+                    $.ajax({  
+                        url: [URI],  
+                        type: "DELETE",  
+                        contentType: "application/json",  
+                        headers: {  
+                        Accept : "application/json"  
+                    }  
+                    })  
+                            .success(function(data, status, jq) {  
+                        // alert(status);  
+                        self.items.remove(item);  
+                    })  
+                            .error(function(jq, status, error) {  
+                        $(".error").text(JSON.stringify(status + " " + error));  
+  
+                    });  
+                };  
 };
 ko.applyBindings(new MyCustomerViewModel());
