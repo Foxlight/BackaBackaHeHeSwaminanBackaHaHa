@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/knockout/3.2.0/knockout-min.js'></script>
+        <script src='article.js'></script>
+		<script src='commentaire.js'></script>
+		<script src='roles.js'></script>
+		<script src='utilisateur.js'></script>
+    </head>
+    <body>
+        <table border="1">
+            <thead>
+                <tr>
+					<th>Titre</th>
+					<th>Contenu</th>
+					<th>Publication</th>
+					<th>Mots clés</th>
+					<th>Position</th>
+					<th>Longitude</th>
+					<th>Latitude</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: article">
+                <tr>
+                    <td data-bind="text: titre"/>
+					<td data-bind="text: contenu"/>
+					<td data-bind="text: publier_actif"/>
+					<td data-bind="text: motCles"/>
+					<td data-bind="text: positionNom"/>
+                    <td data-bind="text: positionLongitude"/>
+					<td data-bind="text: positionLatitude"/>
+                </tr>
+            </tbody>
+        </table>
+		
+		<table border="1">
+            <thead>
+                <tr>
+                    <th>Commentaire</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: commentaire">
+                <tr>
+                    <td data-bind="text: commentaire"/>
+                </tr>
+            </tbody>
+        </table>
+		
+		<table border="1">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: role">
+                <tr>
+					<td data-bind="text: nom"/>
+                    <td data-bind="text: description"/>
+                </tr>
+            </tbody>
+        </table>
+		
+		<table border="1">
+            <thead>
+                <tr>
+                    <th>Nom d'utilisateur</th>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>Mot de passe</th>
+                    <th>Infos</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: utilisateur">
+                <tr>
+                    <td data-bind="text: nomUtilisateur"/>
+                    <td data-bind="text: nom"/>
+                    <td data-bind="text: prenom"/>
+					<td data-bind="text: motDePasse"/>
+                    <td data-bind="text: info"/>
+                </tr>
+            </tbody>
+		</table>
+    </body>
+</html>

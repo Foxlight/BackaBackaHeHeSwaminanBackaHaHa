@@ -1,6 +1,6 @@
 MyCustomerViewModel = function () {
     var self = this;
-    self.items = ko.observableArray();
+    self.commentaire = ko.observableArray();
     $.getJSON("http://localhost:8080/ProjetAmosse/resources/commentaire/").
             then(function (commentaires) {
                 $.each(commentaires, function () {
