@@ -21,17 +21,11 @@ var ViewModel = function(articles) {
 	}));
 };
 
-var getData = function() {  
-	$.ajax({  
-		url: "http://localhost:8080/bibliotheque_ntdp/webresources/category",  
-		type: "GET",  
-		headers: {  
-			Accept: "application/json"  
-		}  
-	}).success(function(data, status, jq) {   
-		ko.applyBindings(new ViewModel(data));  
-	}).error(function(jq, status, error) {  
-		$(".error").text(JSON.stringify(status + " " + error));  
-
-	});  
-}; 
+var getData = function () { 
+	var myHeaders = new Headers();
+	myHeaders.set('Accept', 'application/json');
+	fetch("http://localhost:8080/blog_RESTful/resources/article", {
+		method: 'GET',
+		headers: myHeaders }).then(function (response) { return response.json(); }).then(function (j) {
+		ko.applyBindings(new ViewModel(j)); }).catch(function (jq, status, error) { $(".error").text(JSON.stringify(status + " " + error)); });
+};
