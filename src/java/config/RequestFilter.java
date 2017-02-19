@@ -12,7 +12,7 @@ import javax.ws.rs.container.ContainerResponseFilter;
 
 /**
  *
- * @author fork
+ * @author Foxlight
  */
 public class RequestFilter implements ContainerResponseFilter{
     
