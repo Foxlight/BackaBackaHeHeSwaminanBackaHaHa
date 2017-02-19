@@ -24,7 +24,7 @@ var ViewModel = function(articles) {
 var getData = function () { 
 	var myHeaders = new Headers();
 	myHeaders.set('Accept', 'application/json');
-	fetch("http://localhost:8080/blog_RESTful/resources/article", {
+	fetch("http://localhost:8080/ProjetAmosse/resources/article", {
 		method: 'GET',
 		headers: myHeaders }).then(function (response) { return response.json(); }).then(function (j) {
 		ko.applyBindings(new ViewModel(j)); }).catch(function (jq, status, error) { $(".error").text(JSON.stringify(status + " " + error)); });
