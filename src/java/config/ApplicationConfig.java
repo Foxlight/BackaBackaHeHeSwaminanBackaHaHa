@@ -61,11 +61,12 @@ public class ApplicationConfig extends Application {
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
         System.err.println("COUCOCUCOCUOCUCUOcUOCUCOUCOCUCOCUCOCUCOU");
+        
+        resources.add(config.Remplissage.class);
         resources.add(service.ArticleFacadeREST.class);
         resources.add(service.CommentaireFacadeREST.class);
         resources.add(service.RolesFacadeREST.class);
         resources.add(service.UtilisateurFacadeREST.class);
         resources.add(config.RequestFilter.class);
-        resources.add(config.Remplissage.class);
     }
 }
