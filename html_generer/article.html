@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>POSITIONLATITUDE</th>
+                    <th>TITRE</th>
+                    <th>POSITIONLONGITUDE</th>
+                    <th>MOTCLES</th>
+                    <th>PUBLIER_ACTIF</th>
+                    <th>CONTENU</th>
+                    <th>POSITIONNOM</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: items">
+                <tr>
+                    <td data-bind="text: positionLatitude"/>
+                    <td data-bind="text: titre"/>
+                    <td data-bind="text: positionLongitude"/>
+                    <td data-bind="text: motCles"/>
+                    <td data-bind="text: publier_actif"/>
+                    <td data-bind="text: contenu"/>
+                    <td data-bind="text: positionNom"/>
+                </tr>
+            </tbody>
+        </table>
+        <script src='../web/js/libs/jquery/jquery.min.js'></script>
+        <script src='../web/js/libs/knockout/knockout-min.js'></script>
+        <script src='RestClient.js'></script>
+    </body>
+</html>
