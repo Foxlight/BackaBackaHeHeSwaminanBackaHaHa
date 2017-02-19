@@ -66,5 +66,6 @@ public class ApplicationConfig extends Application {
         resources.add(service.RolesFacadeREST.class);
         resources.add(service.UtilisateurFacadeREST.class);
         resources.add(config.RequestFilter.class);
+        resources.add(config.Remplissage.class);
     }
 }
