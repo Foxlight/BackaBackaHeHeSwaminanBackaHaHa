@@ -28,7 +28,7 @@
                     <td data-bind="text: publier_actif"/>
                     <td data-bind="text: contenu"/>
                     <td data-bind="text: positionNom"/>
-					<td><input type="button" value="Supprimer"/></td>
+					<td><input type="button" value="Supprimer" data-bind="click:$root.remove.bind($index)"/></td>
                 </tr>
             </tbody>
         </table>

@@ -185,11 +185,11 @@ public class Utilisateur implements Serializable {
         this.listeCommentaires = listeCommentaires;
     }
 
-    public Roles getRole() {
+    public Roles getRoleUtilisateur() {
         return role;
     }
 
-    public void setRole(Roles role) {
+    public void setRoleUtilisateur(Roles role) {
         this.role = role;
     }
     

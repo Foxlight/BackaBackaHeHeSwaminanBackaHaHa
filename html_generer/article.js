@@ -12,13 +12,16 @@ MyCustomerViewModel = function () {
                         publier_actif: ko.observable(this.publier_actif),
                         contenu: ko.observable(this.contenu),
                         positionNom: ko.observable(this.positionNom),
+						
                     });
                 });
             }); 
-	self.remove = function(items){  
-                   self.items.remove(item);
+	self.remove = function(item){  
+                   //self.items.remove(item);
+				   
+                         alert(item.self.titre); 
                     $.ajax({  
-                        url: [URI],  
+                        url: "http://localhost:8080/ProjetAmosse/resources/article/"+item.id,  
                         type: "DELETE",  
                         contentType: "application/json",  
                         headers: {  
@@ -26,7 +29,7 @@ MyCustomerViewModel = function () {
                     }  
                     })  
                             .success(function(data, status, jq) {  
-                        // alert(status);  
+                         alert(status);  
                         self.items.remove(item);  
                     })  
                             .error(function(jq, status, error) {  
