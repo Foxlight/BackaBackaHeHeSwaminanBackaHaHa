@@ -1,6 +1,6 @@
 MyCustomerViewModel = function () {
     var self = this;
-    self.role = ko.observableArray();
+    self.items = ko.observableArray();
     $.getJSON("http://localhost:8080/ProjetAmosse/resources/roles/").
             then(function (roless) {
                 $.each(roless, function () {

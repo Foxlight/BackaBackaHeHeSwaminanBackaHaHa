@@ -8,24 +8,24 @@
         <table border="1">
             <thead>
                 <tr>
-					<th>Titre</th>
-					<th>Contenu</th>
-					<th>Publication</th>
-					<th>Mots clés</th>
-					<th>Position</th>
-					<th>Longitude</th>
-					<th>Latitude</th>
+                    <th>POSITIONLATITUDE</th>
+                    <th>TITRE</th>
+                    <th>POSITIONLONGITUDE</th>
+                    <th>MOTCLES</th>
+                    <th>PUBLIER_ACTIF</th>
+                    <th>CONTENU</th>
+                    <th>POSITIONNOM</th>
                 </tr>
             </thead>
             <tbody data-bind="foreach: items">
                 <tr>
+                    <td data-bind="text: positionLatitude"/>
                     <td data-bind="text: titre"/>
-					<td data-bind="text: contenu"/>
-					<td data-bind="text: publier_actif"/>
-					<td data-bind="text: motCles"/>
-					<td data-bind="text: positionNom"/>
                     <td data-bind="text: positionLongitude"/>
-					<td data-bind="text: positionLatitude"/>
+                    <td data-bind="text: motCles"/>
+                    <td data-bind="text: publier_actif"/>
+                    <td data-bind="text: contenu"/>
+                    <td data-bind="text: positionNom"/>
                 </tr>
             </tbody>
         </table>
